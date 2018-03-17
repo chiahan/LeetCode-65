@@ -21,11 +21,10 @@ or
 ```
 java -ea Solution65 [a string] [expected result]
 ```
-e.g., 
-If the result is the same as your expectation: `java -ea Solution65 "2.2e+2" true`
+## Example Output
+1. If the result is the same as your expectation: `java -ea Solution65 "2.2e+2" true`
 No output
-If the result is not the same as your expectation: `java -ea Solution65 "2.2e+2" false`
-Output:
+2. If the result is not the same as your expectation: `java -ea Solution65 "2.2e+2" false`
 ```
 Exception in thread "main" java.lang.AssertionError: isValidNumber() failed,
 Input: 2.2e+2
