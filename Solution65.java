@@ -2,37 +2,43 @@ class Solution65 {
 
     public static void main(String[] args) {
         if (args.length == 2) {
-            testIsValidNumber(args[0], Boolean.valueOf(args[1]));
+            verifyResult(args[0], Boolean.valueOf(args[1]));
+            System.out.println("Test case passed!");
+        } else {
+            testIsValidNumber();
         }
-
-        testIsValidNumber("2", true);
-        testIsValidNumber("2 ", true);
-        testIsValidNumber(" ", false);
-        testIsValidNumber("2,000", false);
-        
-        testIsValidNumber("2 2", false);
-        testIsValidNumber("2e2", true);
-        testIsValidNumber("2E2", false);
-        testIsValidNumber("2e2.2", false);
-        testIsValidNumber("e10", false);
-        testIsValidNumber("e", false);
-        testIsValidNumber("2e", false);
-        testIsValidNumber("2e+2", true);
-        testIsValidNumber("2e-2", true);
-
-        testIsValidNumber("2.2", true);
-        testIsValidNumber(".2", true);
-        testIsValidNumber("2.", true);
-        testIsValidNumber(".", false);
-        testIsValidNumber(". 1", false);
-        testIsValidNumber(".e", false);
-        
-        testIsValidNumber("-1.", true);
-        testIsValidNumber("+1.", true);
-        testIsValidNumber("-.", false);
     }
 
-    public static void testIsValidNumber(String input, boolean expectedOutput) {
+    public static void testIsValidNumber() {
+        verifyResult("2", true);
+        verifyResult("2 ", true);
+        verifyResult(" ", false);
+        verifyResult("2,000", false);
+        
+        verifyResult("2 2", false);
+        verifyResult("2e2", true);
+        verifyResult("2E2", false);
+        verifyResult("2e2.2", false);
+        verifyResult("e10", false);
+        verifyResult("e", false);
+        verifyResult("2e", false);
+        verifyResult("2e+2", true);
+        verifyResult("2e-2", true);
+
+        verifyResult("2.2", true);
+        verifyResult(".2", true);
+        verifyResult("2.", true);
+        verifyResult(".", false);
+        verifyResult(". 1", false);
+        verifyResult(".e", false);
+        
+        verifyResult("-1.", true);
+        verifyResult("+1.", true);
+        verifyResult("-.", false);
+        System.out.println("All test cases passed!");
+    }
+
+    public static void verifyResult(String input, boolean expectedOutput) {
         boolean output = isValidNumber(input);
         assert output == expectedOutput: "isValidNumber() failed,\n"
             + "Input: " + input + "\n"
