@@ -22,8 +22,14 @@ or
 java -ea Solution65 [a string] [expected result]
 ```
 ## Example Output
+0. If there is not any input and the unit test pass: `java -ea Solution65`
+```
+All test cases passed!
+```
 1. If the result is the same as your expectation: `java -ea Solution65 "2.2e+2" true`
-```All test cases passed!```
+```
+Test case passed!
+```
 2. If the result is not the same as your expectation: `java -ea Solution65 "2.2e+2" false`
 ```
 Exception in thread "main" java.lang.AssertionError: isValidNumber() failed,
