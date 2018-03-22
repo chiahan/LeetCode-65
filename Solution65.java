@@ -47,7 +47,6 @@ class Solution65 {
     }
 
     public static boolean isValidNumber(String s) {
-        boolean result = true;
         boolean hasPoint = false;
         boolean hasE = false;
         boolean hasDigit = false;
@@ -68,7 +67,7 @@ class Solution65 {
                 hasE = true;
                 hasDigit = false;
             } else if ((s.charAt(i) == '-' || s.charAt(i) == '+') && (i == 0 || s.charAt(i-1) == 'e')) {
-                
+                continue;
             } else {
                 return false;
             }
